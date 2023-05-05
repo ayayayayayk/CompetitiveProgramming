@@ -109,7 +109,7 @@ template<class T> struct eulerTour
     // make seg-lca
     size=1;
     while(size<2*n)size*=2;
-    repi(i,1,size*2)seg_lca.push_back(make_pair(-1,n+1));
+    seg_lca=vector<pair<int,int>>(size*2-1,{-1,n+1});
     rep(i,2*n)
     {
       int x=i+size;
@@ -127,7 +127,7 @@ template<class T> struct eulerTour
   }
   
   // fi -> vertex_num. , se -> depth
-  // U wanna know [l,r)
+  // [l,r)
   pair<int,int> LCA(int l,int r,int a,int b,int u)
   {
     if(r<=a || b<=l) return {-1,n+1};
