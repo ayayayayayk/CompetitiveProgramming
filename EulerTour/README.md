@@ -18,7 +18,7 @@ EulerTour
 
 余談だが、dfs（深さ優先探索）は再帰関数よりwhile文で書く方が、今までの感覚的に速いと感じているためそのように実装している。
 
-以下参考リンク
+参考リンク
 https://atcoder.jp/contests/abc294/submissions/41196799
 
 以上。
