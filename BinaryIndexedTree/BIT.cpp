@@ -3,8 +3,8 @@ template<class T> struct BIT
   vector<int> bit;
   vector<T> v;
   int n,size;
-  long long all_inversion;
-  BIT(const vector<T>& a): n(a.size()), all_inversion(0)
+  
+  BIT(const vector<T>& a): n(a.size())
   {
     T x=1-min((T)1,(T)*min_element(a.begin(),a.end()));
     bit=vector<int>(*max_element(a.begin(),a.end())+1+x);
@@ -29,6 +29,7 @@ template<class T> struct BIT
   
   long long allInversion()
   {
+    long long all_inversion=0;
     rep(i,n)
     {
       all_inversion+=i-sum(v[i]);
